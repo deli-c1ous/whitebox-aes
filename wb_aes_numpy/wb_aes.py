@@ -4,9 +4,9 @@ import galois
 import numpy as np
 from scipy.linalg import block_diag
 
-sys.path.append('../aes_numpy')
-from aes_1d import MyAES2  # type: ignore
-from aes_tables import shift_table, shift_table_inv, mix_matrix  # type: ignore
+sys.path.append('..')
+from aes_numpy.aes_1d import MyAES2  # type: ignore
+from aes_numpy.aes_tables import shift_table, shift_table_inv, mix_matrix  # type: ignore
 from utils import timer
 
 

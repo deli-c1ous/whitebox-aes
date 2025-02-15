@@ -6,9 +6,9 @@ import numpy as np
 from more_itertools import sliced
 from scipy.linalg import block_diag
 
-sys.path.append('../aes')
-from aes_1d import MyAES2, gf_mul  # type: ignore
-from aes_tables import shift_table, shift_table_inv  # type: ignore
+sys.path.append('..')
+from aes.aes_1d import MyAES2, gf_mul  # type: ignore
+from aes.aes_tables import shift_table, shift_table_inv  # type: ignore
 from utils import timer
 
 
