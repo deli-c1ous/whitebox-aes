@@ -3,7 +3,7 @@
 import numpy as np
 import galois
 
-from aes_tables import RCONs, S_box, mix_matrix, mix_matrix_inv, S_box_inv
+from aes_tables import RCONs, S_box, mix_matrix, mix_matrix_inv, S_box_inv, GF_poly
 
 # @np.vectorize(otypes=[np.uint8])
 # @cache
@@ -18,7 +18,7 @@ from aes_tables import RCONs, S_box, mix_matrix, mix_matrix_inv, S_box_inv
 #     return p & 0xff
 
 
-GF = galois.GF(2 ** 8, irreducible_poly='x^8 + x^4 + x^3 + x + 1')
+GF = galois.GF(2 ** 8, irreducible_poly=GF_poly)
 mix_matrix_GF = mix_matrix.view(GF)
 mix_matrix_inv_GF = mix_matrix_inv.view(GF)
 

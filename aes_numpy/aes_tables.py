@@ -51,3 +51,4 @@ mix_matrix_inv = np.array([
 RCONs = np.array([0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1B, 0x36], dtype=np.uint8)
 shift_table = np.array([0, 5, 10, 15, 4, 9, 14, 3, 8, 13, 2, 7, 12, 1, 6, 11], dtype=np.uint8)
 shift_table_inv = np.array([0, 13, 10, 7, 4, 1, 14, 11, 8, 5, 2, 15, 12, 9, 6, 3], dtype=np.uint8)
+GF_poly = 'x^8 + x^4 + x^3 + x + 1'

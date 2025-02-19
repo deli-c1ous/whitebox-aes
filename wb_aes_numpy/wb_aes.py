@@ -6,7 +6,7 @@ from scipy.linalg import block_diag
 
 sys.path.append('..')
 from aes_numpy.aes_1d import MyAES2  # type: ignore
-from aes_numpy.aes_tables import shift_table, shift_table_inv, mix_matrix  # type: ignore
+from aes_numpy.aes_tables import shift_table, shift_table_inv, mix_matrix, GF_poly  # type: ignore
 from utils import timer
 
 
@@ -122,7 +122,7 @@ def mixing_bijection(matrix: np.ndarray, arr: np.ndarray) -> np.ndarray:
 
 
 rng = np.random.default_rng()
-GF = galois.GF(2 ** 8, irreducible_poly='x^8 + x^4 + x^3 + x + 1')
+GF = galois.GF(2 ** 8, irreducible_poly=GF_poly)
 mix_matrix_GF = mix_matrix.view(GF)
 
 
